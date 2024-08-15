@@ -3,9 +3,9 @@
 #include <locale.h>   // Biblioteca de aloca?oes de texto por regiao(acentos e tals)
 #include <string.h>   // Biblioteca responsavel pelas strings
 
-int registro() // Função responsavel por cadastrar usuarios
+int registro() // Funï¿½ï¿½o responsavel por cadastrar usuarios
 {
-    //Variáveis
+    //Variï¿½veis
     char arquivo[40];
     char cpf[40];
     char nome[40];
@@ -14,7 +14,7 @@ int registro() // Função responsavel por cadastrar usuarios
 
     // CPF
 
-    printf("Digite o CPF a ser cadastrado:"); //coletando informaçoes do usuário
+    printf("Digite o CPF a ser cadastrado:"); //coletando informaï¿½oes do usuï¿½rio
     scanf("%s", cpf); //%s refere-se a strings
 
     strcpy(arquivo, cpf); // Responsavel por copiar os valores das strings 
@@ -161,17 +161,18 @@ int main()
     printf("Escolha a op??o desejada no menu: \n\n");
     printf("\t 1 - Registrar nomes \n");
     printf("\t 2 - Consultar nomes \n");
-    printf("\t 3 - Deletar nomes \n\n\n");
+    printf("\t 3 - Deletar nomes \n\n");
+    printf("\t 4 - Sair do sistema \n\n");
     printf("Op??o: "); // Fim do programa
 
     scanf("%d" , &opcao); // Armazenando a escolha do usu?rio
 
     system("cls");
 
-    switch (opcao) // inicio da seleção do menu
+    switch (opcao) // inicio da seleï¿½ï¿½o do menu
     {
     case 1:
-        registro(); // chamada de funções   
+        registro(); // chamada de funï¿½ï¿½es   
         break;
     
     case 2:
@@ -180,6 +181,11 @@ int main()
 
     case 3:
         deletar();
+        break;
+
+    case 4:
+        printf("Obrigado por utilizar o sistema!\n");
+        return 0;
         break;
 
     default:   
