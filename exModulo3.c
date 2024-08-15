@@ -3,9 +3,9 @@
 #include <locale.h>   // Biblioteca de aloca?oes de texto por regiao(acentos e tals)
 #include <string.h>   // Biblioteca responsavel pelas strings
 
-int registro() // Funï¿½ï¿½o responsavel por cadastrar usuarios
+int registro() // Função responsavel por cadastrar usuarios
 {
-    //Variï¿½veis
+    //Variáveis
     char arquivo[40];
     char cpf[40];
     char nome[40];
@@ -14,7 +14,7 @@ int registro() // Funï¿½ï¿½o responsavel por cadastrar usuarios
 
     // CPF
 
-    printf("Digite o CPF a ser cadastrado:"); //coletando informaï¿½oes do usuï¿½rio
+    printf("Digite o CPF a ser cadastrado:"); //coletando informaçoes do usuário
     scanf("%s", cpf); //%s refere-se a strings
 
     strcpy(arquivo, cpf); // Responsavel por copiar os valores das strings 
@@ -94,12 +94,12 @@ int consulta()
 
     if(file == NULL)
     {
-        printf("Este CPF n?o est? registrado! \n ");
+        printf("Este CPF não está registrado! \n ");
     }
 
     while(fgets(conteudo, 200, file) != NULL);
     {
-        printf("\nEssas s?o as informa??es do usu?rio: ");
+        printf("\nEssas são as informações do usuário: ");
         printf("%s", conteudo);
         printf("\n\n");
     }
@@ -126,7 +126,7 @@ int deletar()
 
     if(file == NULL)
     {
-        printf("\nO usu?rio n?o se encontra no sistema!. \n\n");
+        printf("\nO usuário não se encontra no sistema!. \n\n");
         system("pause");
     }
 
@@ -135,7 +135,7 @@ int deletar()
     if 
     (file != NULL)
     {
-        printf("\nO usu?rio foi deletado com sucesso!.\n\n");
+        printf("\nO usuário foi deletado com sucesso!.\n\n");
         system("pause");
     }
 
@@ -157,22 +157,22 @@ int main()
     setlocale(LC_ALL, "Portuguese"); // Definindo l?nguagem
 
 
-    printf("--- Cart?rio da EBAC --- \n\n"); // In?cio do programa
-    printf("Escolha a op??o desejada no menu: \n\n");
+    printf("--- Cartório da EBAC --- \n\n"); // In?cio do programa
+    printf("Escolha a opção desejada no menu: \n\n");
     printf("\t 1 - Registrar nomes \n");
     printf("\t 2 - Consultar nomes \n");
     printf("\t 3 - Deletar nomes \n\n");
     printf("\t 4 - Sair do sistema \n\n");
-    printf("Op??o: "); // Fim do programa
+    printf("Opção: "); // Fim do programa
 
     scanf("%d" , &opcao); // Armazenando a escolha do usu?rio
 
     system("cls");
 
-    switch (opcao) // inicio da seleï¿½ï¿½o do menu
+    switch (opcao) // inicio da sele??o do menu
     {
     case 1:
-        registro(); // chamada de funï¿½ï¿½es   
+        registro(); // chamada de fun??es   
         break;
     
     case 2:
@@ -189,7 +189,7 @@ int main()
         break;
 
     default:   
-        printf("Essa op??o n?o existe!\n");
+        printf("Essa opção n?o existe!\n");
         system("pause");
         break;
     }
